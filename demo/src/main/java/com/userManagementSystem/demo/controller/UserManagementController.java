@@ -3,6 +3,7 @@ package com.userManagementSystem.demo.controller;
 import com.userManagementSystem.demo.model.User;
 import com.userManagementSystem.demo.repository.UserDao;
 import com.userManagementSystem.demo.service.UserService;
+import jakarta.validation.Valid;
 import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +17,7 @@ public class UserManagementController {
     UserService userService;
 
     @PostMapping(value = "/addUser")
-    public String addUser(@RequestBody User user){
+    public String addUser(@Valid @RequestBody User user){
         return userService.addNewUser(user);
     }
     @GetMapping(value = "/getAllUsers")

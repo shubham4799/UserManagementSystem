@@ -1,37 +1,24 @@
-# USER MANAGEMENT SYSTEM
-## This Spring project is a user management system with CRUD operations for managing user information. The system includes attributes for UserId, Name, UserName, Address, and Phone Number. The application allows for adding, updating, and deleting user data. The project can be used as a template for creating a user management system and can be customized further to fit specific business needs.
-## LANGUAGE AND FREAMWORK
-### JAVA, SPRING BOOT
-## DATA ATTRIBUTES
-### 
-    userId
-    userName
-    Email
-    Address
-    phoneNumber
-## DATA STRUCTURE
-     CONTROLLER
-     SERVICE
-     REPOSITORY
-     USER
-## OPERATION TO RUN PROGRAM
-    1) Add user info
-    In AddUser functionality we Post User info through Postman and it gets added to the User list -
-    - localhost:8080/addUser
-    
-    2) Update user 
-    In Update user functionality we update the user info through postman.
-    - localhost:8080/updateUserInfo/
-
-    3) GetAll user
-    In GetAll user functionlity we can see all user in our list.
-    - localhost:8080/getAllUsers
-
-    4) Getuser By id
-    In this functinality we wil get the particular user 
-    - localhost:8080/getUser/{userId}
-    
-    5) Delete user
-    In delete user functionality we can remove the user in userlist 
-    - localhost:8080/getAllUsers/deleteUser/{userid}
-
+# Assignment_User_Management(Validation on project) 
+## Validation types
+1.Manual Validation   
+2.Annotation Validation
+## Requirements
+IntelliJIDEA
+ Server port: 8080 (use: localhost:8080)
+ Java version: 17
+Everything is present in the pom.xml (no need to download any library)
+Dependencies needed Spring Boot DevTools,Lombok,Spring Web.
+## Dependencies used
+### Spring Boot DevTools
+* Provides fast application restarts, LiveReload, and configurations for enhanced development experience
+### Lombok
+* Java annotation library which helps to reduce boilerplate code
+### Spring Web
+* Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container
+### Validations
+*  Using validations it validate the data provided by user should be valide as per the annotation
+## WORKING
+I have used validations through annotations on model class attributes where all the validation part will be taken by the annotations ,annotations used are...@NotBlank ,@NotNull, @Email, @Length, etc,..
+Manual validation is done in this project while user is trying to get user by I'd, if the user doesn't exist then I'm handling it and even for updating and deletion processes
+I have added swagger for ease access to the user who trying to access and better understanding
+I have connected the project to the H2 database to check weather the table is present in it and data is correctly being added.
