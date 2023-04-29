@@ -20,5 +20,3 @@ Dependencies needed Spring Boot DevTools,Lombok,Spring Web.
 ## WORKING
 I have used validations through annotations on model class attributes where all the validation part will be taken by the annotations ,annotations used are...@NotBlank ,@NotNull, @Email, @Length, etc,..
 Manual validation is done in this project while user is trying to get user by I'd, if the user doesn't exist then I'm handling it and even for updating and deletion processes
-I have added swagger for ease access to the user who trying to access and better understanding
-I have connected the project to the H2 database to check weather the table is present in it and data is correctly being added.
